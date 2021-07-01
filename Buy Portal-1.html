@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;div align="center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">   </span>&lt;label for="usd-amount"&gt;Amount (USD):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;input id="usd-amount" class="field-element field-control" type="text" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space"> </span>&lt;button id="update" class="button"&gt;Update&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="wrapper"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="info-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Exchange Rate&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="usd-tlos-price"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;No.of TLOS&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="tlos-amount"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="info-container2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Fees&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="fee-amount"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Total (incl. fees)&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="total-amount"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;div id="disclaimer" align="center"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>Figures above are estimates only&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div align="center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input id="telos-account" maxlength="12" placeholder="Enter Telos Account" class="field-element field-control" type="text" /&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/br&gt;</p>
+<p class="p1">&lt;div align="center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="buy-tlos" class="button sqs-system-button sqs-editable-button"&gt;Continue with moonpay&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Moonpay window will display below</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/br&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="moonpay-iframe-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;iframe id="buytlos" class="moonpay-iframe" allow="accelerometer; autoplay; camera; gyroscope; payment"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>frameborder="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/iframe&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script type="text/javascript"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var telosAccountInput = document.getElementById('telos-account');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var usdAmountInput = document.getElementById('usd-amount');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var usdTlosPriceDiv = document.getElementById('usd-tlos-price');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var tlosAmountDiv = document.getElementById('tlos-amount');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var feeAmountDiv = document.getElementById('fee-amount');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var totalAmountDiv = document.getElementById('total-amount');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var buyTlosButton = document.getElementById('buy-tlos');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var minimumAmount = 25;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-tab-span">	</span>telosAccountInput.addEventListener('focusout', accountNameSet);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>usdAmountInput.addEventListener('focusout', amountSet);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>buyTlosButton.addEventListener('click', accountNameSet);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>buyTlosButton.addEventListener('click',amountSet);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>buyTlosButton.addEventListener('click', goToPage);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>var validAccount = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var validAmount = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>var quoteCompleted = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/*handleChange(); */</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function accountNameSet() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>telosAccountInput.value = telosAccountInput.value.toLowerCase().trim();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var accountName = telosAccountInput.value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var nameCheckRequest = new XMLHttpRequest();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nameCheckRequest.addEventListener('load', function () {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (this.status == 200) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("This Telos account does not exist");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>telosAccountInput.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>validAccount = false;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>validAccount = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>handleChange();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>nameCheckRequest.open('get', `https://api.telos.net/v1/accounts/${accountName}`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>nameCheckRequest.send();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function amountSet() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var amount = parseFloat(usdAmountInput.value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (amount &lt; minimumAmount) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert(`Minimum amount is $${minimumAmount}`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>validAmount = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>validAmount = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>getMoonpayQuote();</p>
+<p class="p1"><span class="Apple-converted-space">       </span>/* handleChange(); */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">/*</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function handleChange() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!validAccount || !validAmount) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setButtonDisabled(true);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setButtonDisabled(false);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*/</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* function setButtonDisabled(disabled) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if ((disabled &amp;&amp; !buyTlosButton.hasAttribute('disabled')) || (!disabled &amp;&amp; buyTlosButton.hasAttribute('disabled')))</p>
+<p class="p1"><span class="Apple-converted-space">              </span>buyTlosButton.toggleAttribute('disabled');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}*/</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/*</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Get api link for moonpay</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function moonpayLink() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var amount = document.getElementById('amount').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("getquote").src =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`https://api.moonpay.io/v3/currencies/eos/buy_quote/?apiKey=pk_live_bLNjJYoA2bwYMs7ir72Tgb5jLyHrK&amp;baseCurrencyAmount=${amount}&amp;extraFeePercentage=0&amp;baseCurrencyCode=usd&amp;paymentMethod=credit_debit_card,sepa_bank_transfer,gbp_bank_transfer,apple_pay`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*/</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/*</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Callback to run when data is ready</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function coinGeckoListener() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var data = JSON.parse(this.responseText);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('usd-tlos-price').innerHTML = data.telos.usd;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create a new ajax requst</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var oReq = new XMLHttpRequest();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Fire callback on load event</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oReq.addEventListener("load", coinGeckoListener);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create the connection to our API</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oReq.open("GET", "https://api.coingecko.com/api/v3/simple/price?ids=telos&amp;vs_currencies=usd");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Fire the request</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oReq.send();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>*/</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Callback to run when data is ready</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function moonpayQuoteListener() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var data = JSON.parse(this.responseText);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feeAmountDiv.innerHTML = `$${parseFloat(data.feeAmount).toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>totalAmountDiv.innerHTML = `$${(data.totalAmount).toFixed(2)}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>getNewdexQuote(parseFloat(data.quoteCurrencyAmount));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getMoonpayQuote() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create a new ajax requst</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var oReq = new XMLHttpRequest();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Fire callback on load event</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oReq.addEventListener("load", moonpayQuoteListener);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create the connection to our API</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oReq.open("GET", `https://api.moonpay.io/v3/currencies/eos/buy_quote/?apiKey=pk_live_bLNjJYoA2bwYMs7ir72Tgb5jLyHrK&amp;baseCurrencyAmount=${usdAmountInput.value}&amp;extraFeePercentage=0&amp;baseCurrencyCode=usd&amp;enabledPaymentMethods=credit_debit_card,sepa_bank_transfer,gbp_bank_transfer,apple_pay`);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Fire the request</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oReq.send();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getNewdexQuote(eosAmount) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var newdexQuery = new XMLHttpRequest();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Fire callback on load event</p>
+<p class="p1"><span class="Apple-converted-space">        </span>newdexQuery.addEventListener("load", function () {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var data = JSON.parse(this.responseText);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var asks = data.data.asks;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>asks.sort((a, b) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (a[0] &lt; b[0])</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return -1;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>var tlosTotal = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var eosLeft = eosAmount;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (var i = 0; i &lt; asks.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var eosPrice = asks[i][0];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var tlosAmount = asks[i][1];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var eosSpendable = eosPrice * tlosAmount;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var toSpend = eosLeft &lt; eosSpendable ? eosLeft : eosSpendable;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tlosTotal += (toSpend / eosPrice);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>eosLeft -= toSpend;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (eosLeft &lt; 0)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>throw new Error("Overspend!!!");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (eosLeft == 0)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>tlosAmountDiv.innerText = `${tlosTotal.toFixed(4)} TLOS`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>usdTlosPriceDiv.innerText = `$${(parseFloat(usdAmountInput.value) / tlosTotal).toFixed(4)}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create the connection to our API</p>
+<p class="p1"><span class="Apple-converted-space">        </span>newdexQuery.open("GET", "https://api.newdex.io/v1/depth?symbol=eosio.token-tlos-eos");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Fire the request</p>
+<p class="p1"><span class="Apple-converted-space">        </span>newdexQuery.send();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function goToPage() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var telosAccount = encodeURIComponent(telosAccountInput.value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var amount = usdAmountInput.value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var urlToSign = `https://buy.moonpay.io?apiKey=pk_live_bLNjJYoA2bwYMs7ir72Tgb5jLyHrK&amp;currencyCode=eos&amp;walletAddress=tradefortlos&amp;baseCurrencyCode=usd&amp;walletAddressTag=${encodeURIComponent(telosAccount)}&amp;baseCurrencyAmount=${amount}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var signatureRequest = new XMLHttpRequest();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>signatureRequest.open("POST", "https://api.telos.net/v1/trading/getMoonpaySwapUrl");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>signatureRequest.setRequestHeader('Content-type', 'application/json;charset=UTF-8');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>var requestBody = JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">            </span>urlToSign: urlToSign</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>signatureRequest.onload = function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (signatureRequest.readyState == 4 &amp;&amp; signatureRequest.status == 200) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var moonpayIframe = document.getElementById("buytlos");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>moonpayIframe.src = signatureRequest.responseText;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>moonpayIframe.scrollIntoView();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error(signatureRequest.responseText);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>signatureRequest.send(requestBody);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style type="text/css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>html {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>scroll-behavior: smooth;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.moonpay-iframe-container {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height:800px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding-top: 62.5%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Then style the iframe to fit in the container div with full height and width */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.moonpay-iframe {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bottom: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>div#wrapper {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin-left: 25%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-right: 25%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-width: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-color: black;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-style: solid;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 1.25em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 0em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>line-height: 1.5em</p>
+<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 30em) {</p>
+<p class="p1">div#wrapper {</p>
+<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>margin-left: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-right: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">yui_3_17_2_1_1601954363390_11108 {</p>
+<p class="p1">text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space"> </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>div#info-container {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: small;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>min-width: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>float:left;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>div#info-container2 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: small;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>min-width: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>div#disclaimer {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: small;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.field-element {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0.2em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 0.3em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+</body>
+</html>
